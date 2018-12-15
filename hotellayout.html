@@ -1,46 +1,150 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>
-		hotel layout
-	</title>
+	<title>Hotel layout</title>
+	<style>
+	body{
+		background-color: #f8f8f8;margin:0px;padding: 0px;
+	}
+	/* header css */
+	header{background-color:#fff;padding:2px;    box-shadow: 0px 0px 10px #ccc;}
+	.header-section ul{list-style: none;}
+	.header-section ul li{display: inline-block;padding: 10px;}
+	.header-section ul li a{color:#333;text-decoration: none;}
+	.header-section{display: -webkit-inline-box;}
+	/* section css */
+	section{margin:10px 50px;height:200px;}
+	.section-search h2{font-weight: 400;}
+	.section-input{background: #fff;padding: 20px;}
+	/* section1 cs */
+	.section1,.section2{margin-top:20px;min-height: 400px;}
+	.section1-child{display: inline-flex;}
+	.section1-child div{background-color: #ddd;padding:20px;}
+	.section1-child div:first-child{width:60%;margin-right: 22px;}
+	.section1-child div:last-child{width:40%;}
+
 	 
-
+	.section2-child{display: inline-flex;}
+	.section2-child div{background-color: #ddd;padding:20px;}
+	.section2-child div:first-child{width:60%;margin-right: 22px;}
+	.section2-child div:last-child{width:40%;}
+	 
+ 
+	</style>
 </head>
-
 <body>
 <!-- GrandFather -->
 	<div id="GrandFather">
 			<!-- header -->
 		<header>
-			<nav class="header-section"> </nav>
+			<div>
+					<nav class="header-section"> 
+						<ul>
+							<li>Logo</li>
+						</ul>
+						<ul>
+							<li><a href="#">Search</a></li>
+							<li><a href="#">Select</a></li>
+							<li><a href="#">Review</a></li>
+							<li><a href="#">Payment</a></li>
+							<li><a href="#">Confirm</a></li>
+						</ul>
+					</nav>
+			</div>
+			
 		</header>
 		<!-- section -->
 		<section>
 			<div class="main-section">
-					<div class="section-search"></div>
+					<div class="section-search">
+						<h2>Search hotel looking for </h2>
+						<div class="section-input">
+							<!-- hotels -->
+							<label for="">Hotel Section</label> 
+							<select name="" id="">
+									<option value="">Select hotel</option>
+									<option value="">Five star</option>
+									<option value="">Four star</option>
+									<option value="">Three star</option>
+							</select>
+							<label for="">Check In</label>
+							<input type="date" class="form form-date">
+							<input type="time" class="form form-time">
+							<!-- nights -->
+							<label for="">Check Out</label> 
+							<select name="" id="">
+									<option value="">0</option>
+									<option value="">1</option>
+									<option value="">2</option>
+									<option value="">3</option>
+							</select>
+							<!-- Nights -->
+							<label for="">Nights</label> 
+							<select name="" id="">
+									<option value="">0</option>
+									<option value="">1</option>
+									<option value="">2</option>
+									<option value="">3</option>
+							</select>
+							<!-- adults -->
+							<label for="">Adults</label> 
+							<select name="" id="">
+									<option value="">0</option>
+									<option value="">1</option>
+									<option value="">2</option>
+									<option value="">3</option>
+							</select>
+							<!-- children -->
+							<label for="">Children</label> 
+							<select name="" id="">
+									<option value="">0</option>
+									<option value="">1</option>
+									<option value="">2</option>
+							</select>
+							<button class="btn">Search</button>
+						</div>
+					</div>
 					<div class="section1">
-							<div class="section1-child"></div>
-							<div class="section1-child"></div>
+							<div class="section1-child">
+								<div>
+									<img src="img/calendar.png" alt="">
+									<h2>Hotel Name</h2>
+									<p>You can modify the variables to your own custom values, or just use the mixins with their default values. 
+										Here’s an example of using the default settings to create a two-column layout with a gap between.</p>
+								</div>
+								<div>
+										<h2>Hotel Name</h2>
+										<p>You can modify the variables to your own custom values, or just use the mixins with their default values. 
+											Here’s an example of using the default settings to create a two-column layout with a gap between.</p>
+								</div>
+							</div>
+							 
 					</div>
 					<div class="section2">
-							<div class="section2-child"></div>
-							<div class="section2-child"></div>
+							<div class="section2-child">
+									<div>
+											<img src="img/calendar.png" alt="">
+											<h2>Hotel Name</h2>
+											<p>You can modify the variables to your own custom values, or just use the mixins with their default values. 
+												Here’s an example of using the default settings to create a two-column layout with a gap between.</p>
+										</div>
+										<div>
+												<h2>Hotel Name</h2>
+												<p>You can modify the variables to your own custom values, or just use the mixins with their default values. 
+													Here’s an example of using the default settings to create a two-column layout with a gap between.</p>
+										</div>
+							</div>
+							 
 					</div>
 			</div>
 		</section>
 		<!-- footer -->
 		<footer>
 			<div class="footer-section">
-				<p>Footer</p>
+			 
 			</div>
 		</footer>
 	</div>
-	 
-
-
-
 </body>
 
 </html>
