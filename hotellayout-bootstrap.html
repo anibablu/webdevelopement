@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hotel layout</title>
+	<title>bootstrap layout</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<style>
@@ -9,11 +9,12 @@
 		background-color: #fff;margin:0px;padding: 0px;
 	}
 	.text-danger{color:grey;}
+	.mb-20{margin-bottom:20px;}
 	</style>
 </head>
 <body>
  <div class="container">
-	<div class="row">
+	<div class="row mb-20">
 		<div class="col-md-3 bg-primary">
 			<h1 class="text-danger">Anil</h1>
 		</div>
@@ -27,7 +28,7 @@
 			<h1 class="text-danger">Sree laksmhi</h1>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row mb-20 ">
 			<div class="col-md-6 bg-warning">
 				<h1 class="text-center">Aravind</h1>
 			</div>
@@ -112,7 +113,66 @@
 					<img class="img-rounded img-responsive" src="./img/bg.jpg" alt="">
 				</div>
 	</div>
-	 
+	 <div class="row mb-20">
+		<div class="col-md-4">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					This is panel 
+				</div>
+				<div class="panel-body">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque totam suscipit odit sit, magnam alias maxime illo dolorem sint maiores esse nostrum exercitationem placeat non repudiandae vero nam quia aliquam.</p>
+				</div>
+				<div class="panel-footer">
+					 <button class="btn btn-xs btn-warning">Submit</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="jumbotron">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eum atque consequuntur commodi impedit, aperiam voluptatibus error, quaerat voluptatum magni ullam at, earum unde in nihil dolore modi pariatur quas.
+			</div>
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique magnam dignissimos voluptatem, nobis dolor, fuga maxime eius suscipit non porro voluptate repellat culpa illo debitis assumenda corporis sequi nemo hic?</p>
+				<footer class="pull-right">- Anil</footer>
+			</blockquote>
+		</div>
+		<div class="col-md-4">
+			<div class="well well-lg">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div>
+				<button class="btn btn-primary btn-lg mb-20">button large</button><br/>
+				<button class="btn btn-success btn-md mb-20">button large</button><br/>
+				<button class="btn btn-warning btn-sm mb-20">button large</button><br/>
+				<button class="btn btn-danger btn-xs mb-20">button large</button><br/>
+			</div>
+			<div class="btn-group">
+				<button class="btn btn-primary btn-lg">button 1</button>
+				<button class="btn btn-success btn-lg">button 2</button>
+			</div>
+		</div>
+	 </div>
+	 <div class="row mb-20">
+		 <div class="alert alert-success alert-dismissible">
+			<!-- <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> -->
+			<p>This is alert-success text box</p>
+		 </div>
+		 <div class="alert alert-danger alert-dismissible">
+			<!-- <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> -->
+			<p>This is alert-success text box</p>
+		 </div>
+		 <div class="alert alert-warning alert-dismissible">
+			<!-- <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> -->
+			<p>This is alert-success text box</p>
+		 </div>
+	 </div>
+	 <div class="row mb-20">
+		<div class="col-md-6">
+			<video src="./img/movie.mp4" controls></video>
+		</div>
+	 </div>
  </div>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <!-- Latest compiled and minified JavaScript -->
