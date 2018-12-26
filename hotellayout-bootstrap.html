@@ -6,14 +6,229 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<style>
 	body{
-		background-color: #fff;margin:0px;padding: 0px;
-	}
+		background-color: pink;margin:0px;padding: 0px;
+		width:100%;
+		/* 
+		background-image: url('./img/bg.jpg')  */
+		}
 	.text-danger{color:grey;}
 	.mb-20{margin-bottom:20px;}
+	.nav-tabs{border-bottom: none;}
+	#navTAbs .nav-tabs>li.active>a, #navTAbs .nav-tabs>li.active>a:focus, #navTAbs .nav-tabs>li.active>a:hover {
+    color: #fff;
+    background-color: #7cd965;
+}
+.bg-white{background-color:#fff;margin-top:60px;border-radius: 6px;box-shadow: 0px 0px 10px #333}
+.bg-white .row{padding:10px;}
 	</style>
 </head>
 <body>
- <div class="container">
+ <div class="container bg-white">
+		<div class="row mb-20">
+				<!--modal-->
+			   <!-- class="modal fade" data-toggle="modal" data-target="#myModal" -->
+			   <div class="modal fade" id="SignIn">
+				   <div class="modal-dialog">
+						<div class="modal-content">
+								<div class="modal-header">
+										<h2 class="text-center">Welcome</h2>
+
+									</div>
+									<div class="modal-body">
+										<div class="container">
+											<div class="row">
+												<div class="col-sm-6">
+														<div class="form-group">
+																<input type="text" class="form-control" placeholder="email id ">
+														</div>
+														<div class="form-group">
+																<input type="password" class="form-control" placeholder="password">
+
+														</div>
+														<div class="form-group">
+															<div class="checkbox">
+																	<span><input type="checkbox"> Remember me</span>
+															</div>
+														</div>
+														<button type="button" class="btn btn-primary btn-block"> Sign In</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- <div class="modal-footer">
+										<button type="button" class="btn btn-primary"> Sign In</button>
+									</div> -->
+						</div>
+				   </div>
+					
+				   </div>
+				   <!--navbar-->
+				   <!-- class="navbar navbar-header navbar-brand nav navbar-nav" -->
+				   <div class="col-sm-12">
+						   <!-- <nav class="navbar navbar-inverse">
+								   <div class="container-fluid">
+									 <div class="navbar-header">
+									   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+										 <span class="icon-bar"></span>
+										 <span class="icon-bar"></span>
+										 <span class="icon-bar"></span> 
+									   </button>
+									   <a class="navbar-brand" href="#">WebSiteName</a>
+									 </div>
+									 <div class="collapse navbar-collapse" id="myNavbar">
+									   <ul class="nav navbar-nav">
+										 <li class="active"><a href="#">Home</a></li>
+										 <li><a href="#">Page 1</a></li>
+										 <li><a href="#">Page 2</a></li> 
+										 <li><a href="#">Page 3</a></li> 
+									   </ul>
+									   <ul class="nav navbar-nav navbar-right">
+										 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+										 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+									   </ul>
+									 </div>
+								   </div>
+								 </nav> -->
+				  <nav class="navbar navbar-default navbar-fixed-top">
+					  <!-- container-fluid -->
+					  <div class="container-fluid">
+						  <!-- navbar-header -->
+						 <div class="navbar-header">
+							 <button type="button" class="navbar-toggle" data-target="#mynav" data-toggle="collapse">
+									<span class=" icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+							 </button>
+							 <a class="navbar-brand" href="#">Grepthor
+							 </a>
+						 </div>
+						 <!-- nav menu -->
+						 <div class="collapse navbar-collapse" id="mynav" >
+								<ul class="nav navbar-nav navbar-left">
+										<li><a href="#">Home</a></li>
+										<li><a href="#">About Us</a></li>
+										<li>
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services
+												<span class="caret"></span>
+											</a>
+											<ul class="dropdown-menu">
+													<li class="dropdown-header">Team members</li>
+														<li><a href="#">Aravind</a></li>
+														<li><a href="#">Akhila</a></li>
+														<li><a href="#">Harish</a></li>
+														<li><a href="#">Mehar</a></li>
+														<li class="dropdown-header">Team members</li>
+														<li><a href="#">Durga</a></li>
+														<li><a href="#">Sravan</a></li>
+														<li class="divider"></li>
+														<li><a href="#">Sai</a></li>
+												</ul>
+										</li>
+									 
+								 </ul>
+								 <ul class="nav navbar-nav navbar-right">
+										<li><a href="#" data-toggle="modal" data-target="#SignIn">Sign In</a></li>
+										<li><a href="#">Register</a></li>
+								 </ul>
+						 </div>
+					  </div>
+					  <!-- ./container-fluid -->
+				  </nav><!-- ./nav -->
+					</div>
+				   <!--forms-->
+				   <!-- class="form-inline form-group form-horizontal" -->
+				   <!-- <div class="col-sm-4">
+				   
+				   </div> -->
+			   <!-- dropdowns -->
+			   <!-- class="dropdown-toggle dropduwn-menu" data-toggle="dropdown" -->
+			   <div class="col-sm-3">
+				   <div class="dropdown">
+					   <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Dropdown</button>
+						   <ul class="dropdown-menu">
+							   <li class="dropdown-header">Team members</li>
+								   <li><a href="#">Aravind</a></li>
+								   <li><a href="#">Akhila</a></li>
+								   <li><a href="#">Harish</a></li>
+								   <li><a href="#">Mehar</a></li>
+								   <li class="dropdown-header">Team members</li>
+								   <li><a href="#">Durga</a></li>
+								   <li><a href="#">Sravan</a></li>
+								   <li class="divider"></li>
+								   <li><a href="#">Sai</a></li>
+						   </ul>
+				   </div>
+			   </div>
+			  
+			   <!--tabs-->
+			   <!-- class="nav nav-tabs tab-content tab-pane fade in" href="#home" data-toggle="tab" -->
+			   <div class="col-sm-4" id="navTAbs">
+					
+							   <ul class="nav nav-tabs">
+								   <li><a data-toggle="tab" href="#home">Account</a></li>
+								   <li  class="active"><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+								   <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+								   <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+							   </ul>
+			   
+							   <div class="tab-content">
+								   <div id="home" class="tab-pane fade in active">
+									   <h3>HOME</h3>
+									   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+										   magna aliqua.</p>
+								   </div>
+								   <div id="menu1" class="tab-pane fade">
+									   <h3>Menu 1</h3>
+									   <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								   </div>
+								   <div id="menu2" class="tab-pane fade">
+									   <h3>Menu 2</h3>
+									   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+										   aperiam.</p>
+								   </div>
+								   <div id="menu3" class="tab-pane fade">
+									   <h3>Menu 3</h3>
+									   <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+								   </div>
+						
+				   </div>
+			   </div>
+			   <div class="col-sm-4" id=" ">
+					   <ul class="nav nav-tabs">
+						   <li><a data-toggle="tab" href="#home">Account</a></li>
+						   <li  class="active"><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+						   <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+						   <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+					   </ul>
+	   
+					   <div class="tab-content">
+						   <div id="home" class="tab-pane fade in active">
+							   <h3>HOME</h3>
+							   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+								   magna aliqua.</p>
+						   </div>
+						   <div id="menu1" class="tab-pane fade">
+							   <h3>Menu 1</h3>
+							   <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						   </div>
+						   <div id="menu2" class="tab-pane fade">
+							   <h3>Menu 2</h3>
+							   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+								   aperiam.</p>
+						   </div>
+						   <div id="menu3" class="tab-pane fade">
+							   <h3>Menu 3</h3>
+							   <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						   </div>
+				
+		   </div>
+			   </div>
+			    <!--collapse-->
+			   <!-- class="collapse in" data-target="#" data-toggle="collapse" -->
+			   <div class="col-sm-4">
+			   
+				</div>
+		   </div>
 	<div class="row mb-20">
 		<div class="col-md-3 bg-primary">
 			<h1 class="text-danger">Anil</h1>
@@ -31,6 +246,7 @@
 	<div class="row mb-20 ">
 			<div class="col-md-6 bg-warning">
 				<h1 class="text-center">Aravind</h1>
+				<a href="#navTAbs">Navigate to tabs</a>
 			</div>
 			<div class="col-md-6 bg-default">
 				<h1 class="text-right">Harish</h1>
@@ -170,65 +386,19 @@
 	 </div>
 	 <div class="row mb-20">
 		<div class="col-md-6">
+			<p><u>Video embed responsive</u></p>
 			<div class="embed-responsive embed-responsive-16by9">
 					<video src="./img/movie.mp4" controls class="embed-responsive-item"></video>
 
 			</div>
 		</div>
 		<div class="col-md-6">
+			<p><u>Iframe With embed code provided by youtube</u></p>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/PwsigsH4oXw?autoplay=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	 </div>
 	 
-	 <div class="row mb-20">
-		<!-- dropdowns -->
-		<!-- class="dropdown-toggle dropduwn-menu" data-toggle="dropdown" -->
-		<div class="col-sm-4">
-			<div class="dropdown">
-				<button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Dropdown</button>
-				 
-					<ul class="dropdown-menu">
-						<li class="dropdown-header">Team members</li>
-							<li><a href="#">Aravind</a></li>
-							<li><a href="#">Akhila</a></li>
-							<li><a href="#">Harish</a></li>
-							<li><a href="#">Mehar</a></li>
-							<li class="dropdown-header">Team members</li>
-							<li><a href="#">Durga</a></li>
-							<li><a href="#">Sravan</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Sai</a></li>
-					</ul>
-			
-			</div>
-		</div>
-		<!--collapse-->
-		<!-- class="collapse in" data-target="#" data-toggle="collapse" -->
-		<div class="col-sm-4">
-		
-		</div>
-		<!--tabs-->
-		<!-- class="nav nav-tabs tab-content tab-pane fade in" href="#home" data-toggle="tab" -->
-		<div class="col-sm-4">
-		
-		</div>
-		<!--modal-->
-		<!-- class="modal fade" data-toggle="modal" data-target="#myModal" -->
-		<div class="col-sm-4">
-		
-		</div>
-		<!--navbar-->
-		<!-- class="navbar navbar-header navbar-brand nav navbar-nav" -->
-		<div class="col-sm-4">
-		
-		</div>
-		<!--forms-->
-		<!-- class="form-inline form-group form-horizontal" -->
-		<div class="col-sm-4">
-		
-		</div>
-							 
-	</div>
+	
  </div>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <!-- Latest compiled and minified JavaScript -->
