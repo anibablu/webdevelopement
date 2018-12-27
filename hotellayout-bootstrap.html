@@ -20,6 +20,23 @@
 }
 .bg-white{background-color:#fff;margin-top:60px;border-radius: 6px;box-shadow: 0px 0px 10px #333}
 .bg-white .row{padding:10px;}
+.form-login{
+	background-color: bisque;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 8px 5px 10px #000
+}
+/* tool tip override css */
+.tooltip.right .tooltip-arrow {
+ 
+    border-right-color: #febfca;
+}
+.tooltip{font-size:14px;font-weight: 600;}
+.tooltip-inner {
+ 
+    background-color: #ffc0cb;
+    
+}
 	</style>
 </head>
 <body>
@@ -112,9 +129,44 @@
 					</div>
 				   <!--forms-->
 				   <!-- class="form-inline form-group form-horizontal" -->
-				   <!-- <div class="col-sm-4">
-				   
-				   </div> -->
+				   <div class="col-sm-12">
+								<form action="" class="" >
+									<div class="row">
+										<div class="col-md-offset-4 col-md-4 form-login">
+												<div class="form-group">
+													<label for="">First Name</label>
+														<input type="text" class="form-control" placeholder="firstname">
+												</div>
+										 
+											<div class="form-group">
+													<label for="">Last Name</label>
+													<input type="text" class="form-control" placeholder="lastname">
+											</div>
+										 
+												<div class="form-group">
+													<label>Gender</label>
+													<div class="radio">
+														<label><input type="radio" name="gender"> Male</label>
+														<label><input type="radio" name="gender"> Female</label>	
+													</div>
+												
+												</div>
+										 
+												<div class="form-group">
+														<button type="button" class="btn btn-md btn-success">Submit</button>
+												</div>
+											</div>
+									</div>
+									
+									<!-- <input type="number" placeholder="phonenumber">
+									<input type="email" placeholder="email">
+									<input type="radio" name="gender"> Male
+									<input type="radio" name="gender"> Female
+									<input type="checkbox" name="hobbies"> cricket
+									<input type="checkbox" name="hobbies"> Football
+									<button type="button">Submit</button> -->
+								</form><hr/>
+				   </div>
 			   <!-- dropdowns -->
 			   <!-- class="dropdown-toggle dropduwn-menu" data-toggle="dropdown" -->
 			   <div class="col-sm-3">
@@ -221,7 +273,7 @@
 	<div class="row mb-20 ">
 			<div class="col-md-6 bg-warning">
 				<h1 class="text-center">Aravind</h1>
-				<a href="#navTAbs">Navigate to tabs</a>
+				<a href="#navTAbs" title="navigate to tab" data-toggle="tooltip" data-placement="right">Navigate to tabs</a>
 			</div>
 			<div class="col-md-6 bg-default">
 				<h1 class="text-right">Harish</h1>
@@ -364,7 +416,6 @@
 			<p><u>Video embed responsive</u></p>
 			<div class="embed-responsive embed-responsive-16by9">
 					<video src="./img/movie.mp4" controls class="embed-responsive-item"></video>
-
 			</div>
 		</div>
 		<div class="col-md-6">
@@ -378,6 +429,11 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+		$(document).ready(function(){
+		  $('[data-toggle="tooltip"]').tooltip(); 
+		});
+		</script>
 </body>
 
 </html>
