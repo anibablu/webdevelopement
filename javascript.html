@@ -25,10 +25,56 @@
             </ul>
             <button onclick="AddFunction()" class="btn btn-xs btn-info">Addition</button>
     </div>
+    <div class="well">
+            <h2 class="text-center"><u>String & String methods</u></h2>
+            <h1 id ="cmpny" ></h1>
+            <h3 id="sln"></h3>
+            <ul>
+                    <li>length</li>
+                    <li>indexof</li>
+                    <li>lastindexof</li>
+                    <li>slice</li>
+                    <li>substring</li>
+                    <li>substr</li>
+                    <li>search</li>
+                    <li>replace</li>
+                    <li>touppercase</li>
+                    <li>tolowercase</li>
+                    <li>split</li>
+                    <li>trim</li>
+            </ul>
+    </div>
   
 </body>
 <script>
-    console.log('Iam javascript')
+    console.log('string methods')
+    var sbc = "a,b,c"
+    var str = "GREPTHOR is no 1 in one of the \"IT\" based Company's Grepthor located in Hitech City";
+    document.getElementById("cmpny").innerHTML = str;
+     var res = document.getElementById("sln");
+    // sln.innerHTML = str.length;
+    // sln.innerHTML = str.indexOf("is");
+    // sln.innerHTML = str.lastIndexOf("Grepthor")
+    // sln.innerHTML = str.slice(9,11)
+    // sln.innerHTML = str.substring(-55, -10)
+    // sln.innerHTML = str.substr(9 , 84)
+    // sln.innerHTML = str.search("anil")
+    sln.innerHTML = str.replace(/Grepthor/i, 'XYW')
+    // sln.innerHTML = str.toUpperCase()
+    // sln.innerHTML = str.toLowerCase()
+    // sln.innerHTML = str.split(",")
+    // var arr = sbc.split(',', 2).reverse().join();
+    //     console.log(arr)
+    //    console.log(arr[1])
+    // res.innerHTML = str.charAt(82);
+    // var str = "Visit Microsoft! is Microsoft";
+    // var res = str.replace(/Microsoft/g, "W3Schools");
+    console.log(res)
+
+    
+
+
+    // console.log('Iam javascript')
     var x = 5, y = 4 , z = 4 ;
     x+=y; //9
     //y-=z; //0
@@ -47,8 +93,8 @@
             return this.firstname + this.lastname;
         }
     }
-    console.log(ArrayKey[2])
-    console.log(ObjectKey.name())
+    // console.log(ArrayKey[2])
+    // console.log(ObjectKey.name())
     
     //events 
     function AddFunction(){
