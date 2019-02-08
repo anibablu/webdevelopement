@@ -11,6 +11,7 @@
  
 </head>
 <body>
+<div class="container">
     <div class="well">
             <h2 class="text-center"><u>Javascript</u></h2>
             <h5>Datatype</h5>
@@ -44,10 +45,142 @@
                     <li>trim</li>
             </ul>
     </div>
+    <div class="well">
+            <h2 class="text-center"><u>number & number methods</u></h2>
   
+            <ul>
+                    <li>length</li>
+                    <li>toString() </li>
+                    <li>toExponential()</li>
+                   <li>toFixed()</li>
+                   <li>toPrecision()</li>
+                   <li><b>variables to numbers</li></b></li>
+                   <li>Number()</li>
+                   <li>parseInt()</li>
+                   <li>parseFloat()</li>
+            </ul>
+    </div>
+    <div class="well">
+            <h2 class="text-center"><u>Array  & Array methods</u></h2>
+            <button onclick="arraypush()">submit</button>
+            <p id="arrpu"></p>
+            <p id="allemployess"></p>
+            <ul>
+                    <li>length</li>
+                    <li>join()</li>
+                    <li>
+                        <p>Popping </p>
+                        <p>pop()</p>
+                        <p>Pushing </p>
+                        <p>push()</p>
+                    </li>
+                    <li>shift()</li>
+                    <li>unshift()</li>
+                    <li><p>Changing Elements</p>
+                        <p>array[array.length]</p>
+                    </li>
+                    <li><p>Deleting Elements</p>
+                    <p>delete array[array.length]</p>
+                    </li>
+                    <li><p>Splicing an Array</p>
+                    <p>array.splice(p, c, "new", "new");</p>
+                    </li>
+                    <li><p>Merging (Concatenating) Arrays</p>
+                    <p>array = arr1.concat("array2")</p>
+                    </li>
+                    <li>slice()</li>
+                    <li>concat()</li>
+                    <li>sort()</li>
+            </ul>
+    </div>
+    <div class="well">
+                <h2 class="text-center"><u>Functions</u></h2>
+            <li>anonymous function <a href="#" id="annony">annony click</a></li>
+            <li>Self Invoking function</li>
+            <li>callback function <a href="#" id="callback">callback click</a></li>
+
+    </div>
+</div>
 </body>
 <script>
-    console.log('string methods')
+    console.log('Functions-->')
+        console.log("anonymous function =")
+        var anony = function (a, b) { return a + b }; //compare function
+        var call1 = document.getElementById("annony").addEventListener('click', () => { alert(anony(2, 3)) }
+                // function(){
+                //     alert(anony(2,3))
+                // }
+        )
+
+        console.log("self invoking function =")
+        // function myFunction() {
+        //         alert("Iam onload")
+        // }
+        // (function () {
+        //         alert("iam self inovking function")
+        // })();
+        console.log("callback function=")
+        var call2 = document.getElementById("callback").addEventListener('click', function () { alert("hurry!") })
+ 
+    console.log('Array methods-->')
+    var arr = [55,9,2,4,3,5,6];
+    var arr1=["h","a","b","c","d"]
+   var arr2 =["e","f","g"]
+//    var addarr = arr1.concat(arr2);
+ 
+//   var sortmethod = arr1.sort();
+   var sortmethod = arr.sort(function(v,n){return v-n});
+   console.log(sortmethod)
+  
+   var arrobj =[
+           {emplID:1,name:"anil",gender:"male"},//0
+           {emplID:2,name:"akhila",gender:"female"},//1
+           {emplID:3,name:"aravind",gender:"male"},//2
+           {emplID:4,name:"harish",gender:"male"},//3
+           {emplID:5,name:"sai",gender:"male"},//4
+           {emplID:6,name:"sravan",gender:"male"}//5
+        ]
+        var harish = arrobj[3].name.toUpperCase()
+        console.log("Grapethor best employee " +"" + harish)
+        var empllist =''
+
+        arrobj.forEach(function(value){
+                empllist = "<br/>" + empllist + value.name + "<br/>" ;
+        })
+
+     document.getElementById("allemployess").innerHTML = "Grepthor employess List:  " + empllist;
+ 
+
+
+   var numsort = arr.sort(function(a,b){return b-a})//compare function
+ 
+    function arraypush(){
+    var arrpu = arr1.push("e")
+     //var arrp = arr1.pop(1)
+    document.getElementById("arrpu").innerHTML = arr1;
+    console.log(arr1)
+    }
+
+    //var arr1 = [7,8,9]
+    console.log(typeof(arr))
+    console.log(arr.join("/"))
+    // console.log(arrp)
+    console.log(arrpu)
+    console.log('Number methods-->')
+    var today = new Date();
+    console.log(today.getUTCMonth());
+    console.log(today)
+    var num = 12;
+    var nume = 9.838;
+    //console.log(" type of 'numx' is " + "="+" "+typeof(num) )
+    //var numx = num.toString()
+    //console.log(" type of 'numx' is " + "="+" "+typeof(numx) )
+    console.log(nume.toExponential(4))
+    console.log(nume.toFixed(2))
+    console.log(Number(true) + "|" + Number(false))
+    console.log(Number(today))
+    console.log(parseInt("aravaind 25"))
+    console.log('string methods-->')
     var sbc = "a,b,c"
     var str = "GREPTHOR is no 1 in one of the \"IT\" based Company's Grepthor located in Hitech City";
     document.getElementById("cmpny").innerHTML = str;
@@ -70,9 +203,6 @@
     // var str = "Visit Microsoft! is Microsoft";
     // var res = str.replace(/Microsoft/g, "W3Schools");
     console.log(res)
-
-    
-
 
     // console.log('Iam javascript')
     var x = 5, y = 4 , z = 4 ;
@@ -101,6 +231,7 @@
         var a = 4 , b = 3;
         alert("Adding variable a and b (a+b)"+ " " + "=" +" " + (a + b))
     }
+    //numbers
 </script>
 </html>
  
