@@ -16,13 +16,14 @@
             <h2 class="text-center"><u>Javascript</u></h2>
             <h5>Datatype</h5>
             <ul>
-                    <li>number</li>
-                    <li>string</li>
-                    <li>array</li>
-                    <li>object</li>
-                    <li>boolean</li>
-                    <li>null</li>
-                    <li>undefined</li>
+                    <li>number - TypeOf : number</li>
+                    <li>string - TypeOf : string</li>
+                    <li>array - TypeOf : object</li>
+                    <li>object - TypeOf : object</li>
+                    <li>boolean - TypeOf : boolean</li>
+                    <li>null - TypeOf : object</li>
+                    <li>undefined - TypeOf : undefined</li>
+                    <li>function - TypeOf : function</li>
             </ul>
             <button onclick="AddFunction()" class="btn btn-xs btn-info">Addition</button>
     </div>
@@ -100,9 +101,61 @@
             <li>callback function <a href="#" id="callback">callback click</a></li>
 
     </div>
+    <div class="well">
+        <h2 class="text-center"><u>Math</u></h2>
+        <li>Maths.round</li>
+        <li>Maths.min</li>
+        <li>Maths.max</li>
+        <li>Maths.PI // 22/7 or 3.14</li> 
+        <li>Maths.sqrt</li>
+        <li>Maths.abs </li> 
+        <li>Maths.ceil</li>
+        <li>Maths.floor</li>
+        <li>Maths.sin(0 * Math.PI/180)</li>
+  </div>
+  <div class="well">
+                <h2 class="text-center"><u>Condition</u></h2>
+                <li>if</li>
+                <li>else</li>
+                <li>else if</li>
+                <li>if(condition){
+                        //code execute
+                        }
+                   else if(condition){
+                        //code execute
+                        }
+                   else{
+                        //code execute
+                        }
+                </li>
+                <li>switch</li>
+                <li>keywords- break, continue
+                        switch(condition){
+                                case:0 ;
+                                code excution;
+                                break;
+                                case:1
+                                code excution;
+                                break;
+                                default;
+                                code excution;
+                        }
+                </li>
+          
+          </div>
 </div>
 </body>
 <script>
+        console.log('Maths-->')
+        var d = -4.4, e = 4.3
+        console.log("Min Value =" + Math.min(10,13,9,19))
+        console.log("Max Value =" +Math.max(10,13,9,19))
+        console.log("abs Value =" +Math.abs(d))
+        console.log("ceil Value =" +Math.ceil(e))
+        console.log("floor Value =" +Math.floor(e))
+        console.log("sin Value =" +Math.cos(60 * Math.PI /180))
+
+
     console.log('Functions-->')
         console.log("anonymous function =")
         var anony = function (a, b) { return a + b }; //compare function
@@ -232,6 +285,16 @@
         alert("Adding variable a and b (a+b)"+ " " + "=" +" " + (a + b))
     }
     //numbers
+    console.log('conditions-->')
+    //if else
+    var hour = new Date().getHours();
+    console.log(hour)
+        if (hour >= 10){
+                 console.log("Gud morning")       
+        }
+        else{
+                console.log("Gud Evening")
+        }
 </script>
 </html>
  
