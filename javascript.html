@@ -129,19 +129,50 @@
                         }
                 </li>
                 <li>switch</li>
-                <li>keywords- break, continue
-                        switch(condition){
-                                case:0 ;
-                                code excution;
-                                break;
-                                case:1
-                                code excution;
-                                break;
-                                default;
-                                code excution;
+                <li>keywords- break, continue<br/>
+                        switch(condition)<br/>{
+                                case:0 ;<br/>
+                                code excution;<br/>
+                                break;<br/>
+                                case:1;<br/>
+                                code excution;<br/>
+                                break;<br/>
+                                default;<br/>
+                                code excution;<br/>
                         }
                 </li>
           
+          </div>
+          <div class="well">
+                <h2 class="text-center"><u>Loops</u></h2>
+                <li>for<br/>
+                        <code>
+                for( initilaization; condition; incrementation/decrementation){<br/>
+                        //code execution<br/>
+                }</code><br/>
+                </li>
+                <li>for in<br/>
+                        <code>
+                        for( x in obj){<br/>
+                                //code execution<br/>
+                        }</code><br/>
+                </li>
+                <li>while <br/>
+                        <code>
+                        while(condition){<br/>
+                                //code execution<br/>
+                        }</code><br/>
+                       <p id ="whileloop"></p>
+                </li>
+                <li>do while<br/>
+                        <code>
+                                do{
+                                        //code execution<br/>     
+                                }
+                                while(condition)
+                        </code>
+                        <p id ="dowhile"></p>
+                </li>
           </div>
 </div>
 </body>
@@ -295,6 +326,41 @@
         else{
                 console.log("Gud Evening")
         }
+        console.log('loops-->')
+                //for loops
+                var forarray = [1,2,3,4,5,6,7]
+                var len = forarray.length
+                var i;
+                for (i = 0; i < len; i++) {
+                        console.log(i);
+                }
+                //for in 
+                var person = { name: "Anil", gender: "Male", age: 25 };
+                var text = "";
+                var i;
+                for (i in person) {
+                        text += person[i] + " ";
+                }
+                console.log(text)
+                //while
+                var numwhile = "";
+                var i = 0;  
+                while (i <= 10) {
+                        numwhile += "<br>The number is " + i ;
+                        i++;
+                     
+                }
+                console.log(numwhile)
+               document.getElementById("whileloop").innerHTML = numwhile;
+                //dowhile
+                var dowhile=" " , i = 0;
+                do {
+                        dowhile += "The number is " + i;
+                        i++;
+                }
+                while (i < 10);
+                console.log(dowhile)
+                document.getElementById("dowhile").innerHTML = dowhile;
 </script>
 </html>
  
