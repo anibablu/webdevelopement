@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+    <!-- external style sheet -->
+     <!-- Owl Stylesheets -->
+     <link rel="stylesheet" href="css/owl.carousel.min.css">
+ <style>
+ .footer{position: fixed;bottom:0;}
+ .col-container {
+ display: table;
+ width: 100%;
+}
+.col {
+ display: table-cell;
+ padding: 16px;
+}
+ .demo-content{
+    padding: 15px;
+ font-size: 18px;
+ height:100px;
+  background: #dbdfe5;
+ margin-bottom: 10px;
+   }
+   .combinator>p{color:red;}
+ </style>
+</head>
+<body>
+<div class="container">
+                <section>
+                                <div class="col-container">
+                               <div class="col" style="background:orange">
+                                        <div class="row">
+                                         <div class="col-sm-4">
+                                             <div class="demo-content">X</div>
+                                         </div>
+                                         <div class="col-sm-4">
+                                             <div class="demo-content">Y</div>
+                                         </div>
+                                         <div class="col-sm-4">
+                                             <div class="demo-content">Z</div>
+                                         </div>
+                                       </div>
+                                        <div class="row">
+                                         <div class="col-sm-4">
+                                             <div class="demo-content">A </div>
+                                         </div>
+                                         <div class="col-sm-4">
+                                             <div class="demo-content">B</div>
+                                         </div>
+                                         <div class="col-sm-4">
+                                             <div class="demo-content">C</div>
+                                         </div>
+                                       </div>
+                                       <div class="row">
+                                         <div class="col-sm-4">
+                                             <div class="demo-content">A </div>
+                                         </div>
+                                         <div class="col-sm-4">
+                                             <div class="demo-content">B</div>
+                                         </div>
+                                         <div class="col-sm-4">
+                                             <div class="demo-content">C</div>
+                                         </div>
+                                       </div>
+                              
+                               </div>
+                              
+                               <div class="col" style="background:yellow">
+                                 <h2>Column 2</h2>
+                              <div class="row">
+                                         <div class="col-sm-4">
+                                             <div class="demo-content">X</div>
+                                         </div>
+                                         <div class="col-sm-4">
+                                             <div class="demo-content">Y</div>
+                                         </div>
+                                         <div class="col-sm-4">
+                                             <div class="demo-content">Z</div>
+                                         </div>
+                                       </div>
+                               </div>
+                              </div>
+                              <div class="well combinator">
+                                        <p>hi iam sibiling</p>
+                                        <p>hi iam sibiling</p>
+                                        <span>
+                                                 <p>iam last child</p>
+                                        </span>
+                                       
+                              </div>
+                              </section>
+
+                              <!-- owl-carousel -->
+                <div class="owl-carousel owl-theme">
+                <div class="item">
+                        <img src="img/1.png" alt="">
+                       
+                </div>
+                <div class="item">
+                        <img src="img/1.png" alt="">
+                        
+                </div>
+                <div class="item">
+                        <img src="img/1.png" alt="">
+                         
+                </div>
+                <div class="item">
+                        <img src="img/1.png" alt="">
+                      
+                </div>
+                <div class="item">
+                        <img src="img/1.png" alt="">
+                        
+                </div>
+                <div class="item">
+                        <img src="img/1.png" alt="">
+                     
+                </div>
+               
+              </div>
+    <div class="well">
+        <div class="row">
+                <h2 class="text-center"><u>DOM</u></h2>
+                <div class="col-sm-12">
+                                <h4>Document Object Modal - Methods</h4>
+                </div>
+                
+                <div class="col-sm-6">
+                        <img src="img/dom.PNG" alt="" width="100%">
+                </div>
+                <div class="col-sm-6">
+ <pre>
+ JavaScript can change all the HTML elements in the page
+ JavaScript can change all the HTML attributes in the page
+ JavaScript can change all the CSS styles in the page
+ JavaScript can remove existing HTML elements and attributes
+ JavaScript can add new HTML elements and attributes
+ JavaScript can react to all existing HTML events in the page
+ JavaScript can create new HTML events in the page
+</pre>
+                </div>
+                <div class="col-sm-12">
+                <p>HTML DOM elements are Objects,properties,methods and events.</p>
+                <ul>    
+                        <li><b>Find elemets</b></li>
+                        <li>getElementById</li>
+                        <li>getElementsByTagName</li>
+                        <li>getElementsByClassName</li>
+                        <li><b>Change elemets</b></li>
+                        <li>getElementById</li>
+                        <li>getElementsByTagName</li>
+                        <li>getElementsByClassName</li>
+                        <li><b>Adding and Deleting Elements</b></li>
+                        <li>document.createElement(element)</li>
+                        <li>document.removeChild(element)</li>
+                        <li>document.appendChild(element)</li>
+                        <li>document.replaceChild(element)</li>
+                        <li>document.write(text)</li>
+                        <li><b>Events</b></li>
+                        <li>onclick="MyFunction(this)"</li>
+                        <li>addEventListener</li>
+                        <li><b>Navigation</b></li>
+                        <li>parentNode</li>
+                        <li>childNodes[nodenumber]</li>
+                        <li>firstChild</li>
+                        <li>lastChild</li>
+                        <li>nextSibling</li>
+                        <li>previousSibling</li>
+                </ul>
+                </div>
+        </div>
+        <div class="row">
+                        <h2 class="text-center"><u>BOM</u></h2>
+                        <div class="col-sm-12">
+                                        <h4>Browser Object Modal - Methods</h4>
+                        </div>
+                        <div class="col-sm-12">
+                                        <p>The Browser Object Model (BOM) allows JavaScript to "talk to" the browser.</p>
+                                        <ul>    
+                                                <li><b>Window Methods</b></li>
+                                                <li>
+<pre>
+window.innerHeight - the inner height of the browser window (in pixels)
+window.innerWidth - the inner width of the browser window (in pixels)
+window.open() - open a new window
+window.close() - close the current window
+window.moveTo() - move the current window
+window.resizeTo() - resize the current window
+screen.width
+screen.height
+screen.availWidth
+screen.availHeight
+</pre>
+</li>  
+<li><b>Window History</b></li> 
+<li>
+<pre>  
+window.history.back() - same as clicking back in the browser
+window.history.forward() - same as clicking forward in the browser
+</pre>                                                              
+</li>  
+<li><b>Window Navigator</b></li> 
+<li>
+<pre>                                                          
+navigator.appName
+navigator.appCodeName
+navigator.platform
+</pre>   
+</li>                                           
+<li><b>Alert Box</b></li> 
+<li>
+<pre>                                                          
+window.alert() 
+window.confirm("sometext");
+window.prompt("sometext","defaultText");
+</pre>   
+</li>  
+<li><b>Timing Events</b></li> 
+<li>
+<pre>                                                          
+setTimeout(function, milliseconds)
+setInterval(function, milliseconds)
+clearTimeout()
+</pre>   
+</li>  
+<li><b>Cookies</b>Cookies are data, stored in small text files, on your computer.</li> 
+<li>
+<pre>                                                          
+document.cookie="username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+setCookie(cname, cvalue, exdays)
+getCookie(cname) 
+checkCookie() 
+ 
+</pre>   
+</li>                                             
+</ul>
+</div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+        <div class="col-sm-12">
+                <a href="https://www.w3schools.com/" target="_blank">Reference taken from w3schools.com</a>
+        </div>
+        
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+
+</body>
+<script>
+        $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                margin: 10,
+                nav: true,
+                loop: true,
+                
+                responsive: {
+                  0: {
+                    items: 1
+                  },
+                  600: {
+                    items: 3
+                  },
+                  1000: {
+                    items: 2
+                  }
+                }
+              })
+            })
+</script>
+</html>
+ 
