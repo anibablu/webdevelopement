@@ -16,6 +16,10 @@
  display: table;
  width: 100%;
 }
+:-webkit-any()
+:-ms-lang()
+-o-
+
 .col {
  display: table-cell;
  padding: 16px;
@@ -32,7 +36,7 @@
 </head>
 <body>
 <div class="container">
-                <section>
+                <!-- <section>
                                 <div class="col-container">
                                <div class="col" style="background:orange">
                                         <div class="row">
@@ -94,7 +98,7 @@
                                         </span>
                                        
                               </div>
-                              </section>
+                              </section> -->
 
                               <!-- owl-carousel -->
                 <div class="owl-carousel owl-theme">
@@ -215,14 +219,27 @@ navigator.platform
 </li>                                           
 <li><b>Alert Box</b></li> 
 <li>
+    <button class="btn btn-xs btn-primary" onclick ="alert('Iam alert box')"> alert</button>
+    <button class="btn btn-xs btn-primary" onclick="confirm('You want to close?')"> confirm</button>
+    <button class="btn btn-xs btn-primary" onclick="prompt('Enter Your key','ex: 2342343')"> prompt</button>
 <pre>                                                          
 window.alert() 
 window.confirm("sometext");
 window.prompt("sometext","defaultText");
 </pre>   
 </li>  
+<li><b>window.location</b>
+<pre>
+    window.location.href returns the href (URL) of the current page
+    window.location.hostname returns the domain name of the web host
+    window.location.pathname returns the path and filename of the current page
+    window.location.protocol returns the web protocol used (http: or https:)
+    window.location.assign loads a new document
+ </pre>
+</li>
 <li><b>Timing Events</b></li> 
 <li>
+  <p id="timeOut"></p>
 <pre>                                                          
 setTimeout(function, milliseconds)
 setInterval(function, milliseconds)
@@ -236,9 +253,8 @@ document.cookie="username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 setCookie(cname, cvalue, exdays)
 getCookie(cname) 
 checkCookie() 
- 
 </pre>   
-</li>                                             
+</li>    
 </ul>
 </div>
         </div>
@@ -248,7 +264,6 @@ checkCookie()
         <div class="col-sm-12">
                 <a href="https://www.w3schools.com/" target="_blank">Reference taken from w3schools.com</a>
         </div>
-        
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/owl.carousel.js"></script>
@@ -275,6 +290,35 @@ checkCookie()
                 }
               })
             })
+</script>
+<script>
+var wid = "Screen width is " + screen.width;
+var hei ="Screen height is " + screen.height;
+console.log(wid +' & '+ hei);
+var a = 4;
+var a = 5;
+let v = 6;
+const y = 4;
+// const y = 6;
+console.log('const' +y)
+console.log('var' + a)
+console.log('let' + v)
+// var x;
+// (function(){
+//   let v = 8;
+//     alert(v);
+// })();
+ //settimeout
+var dum = function(){alert('I was called after 3sec')}
+//setTimeout(dum, 3000);
+
+function time(){
+  var time = new Date();
+  var timer = time.toLocaleTimeString();
+  document.getElementById('timeOut').innerHTML = timer;
+} 
+var interval = setInterval(time, 1000);
+ 
 </script>
 </html>
  
