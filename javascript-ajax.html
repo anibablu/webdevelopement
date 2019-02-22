@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript-ajax </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+</head>
+<body onload="GetUsersList()">
+    <div class="container">
+        <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center"><u>Javacript With Ajax</u></h2>
+                    <h4>AJAX - Asynchronous Javacript And XML (AJAJ)</h4>
+                </div>
+                <div class="col-sm-12 well" id="fromgroup" style="display: none;">
+                        <form onsubmit="CreateUser()">
+                            <div class="col-sm-2">
+                                    <div class="form-group">
+                                            <input type="text" placeholder="first name" id="Fname" class="form-control">
+                                     </div>
+                            </div>
+                            <div class="col-sm-2">
+                                    <div class="form-group">
+                                            <input type="text" placeholder="last name" id="Lname" class="form-control">
+                                     </div>
+                            </div>
+                            <div class="col-sm-2">
+                                    <div class="form-group">
+                                            <input type="text" placeholder="age" id="Age" class="form-control">
+                                     </div>
+                            </div>
+                            <div class="col-sm-2">
+                                    <div class="form-group">
+                                            <input type="text" placeholder="email" id="Email" class="form-control">
+                                     </div>
+                            </div>
+                            <div class="col-sm-2">
+                                    <div class="form-group">
+                                            <input type="text" placeholder="password" id="Password" class="form-control">
+                                     </div>
+                            </div>
+                            <div class="col-sm-2">
+                                    <div class="form-group">
+                                            <button type="submit" class="btn btn-sm btn-success">Submit</button>
+                                     </div>
+                            </div>
+                            
+                        </form>
+                       
+                   </div>
+                <div class="col-sm-12">
+                        <h4>Users List</h4>
+                        <button id="create" class="btn btn-xs btn-primary">Create User</button>
+                        <table class="table table-bordered table-striped table-hover">
+                            <p></p>
+                            <thead>
+                                <tr>
+                                        <th>ID</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Age</th>
+                                        <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody id="UserList">
+
+                            </tbody>
+                        </table>
+                    </div>
+                   
+        </div>
+    </div>
+    <script>
+        document.getElementById('create').addEventListener('click',function(){
+            document.getElementById('fromgroup').style.display = 'block';
+        })
+        //getmethod
+        function GetUsersList() {
+                var geturl = 'http://api.qshore.com/users';
+                var http = new XMLHttpRequest();
+                http.open('GET', geturl, true);
+                http.onload = function () {
+                    if (http.readyState == 4 && http.status == 200) {
+                    var res = JSON.parse(http.responseText);
+                    console.log(res);
+                    
+                        var len = res.data.length;
+                        for (var i = 0; i < len; i++) {
+                            var userinfo = document.getElementById('UserList');
+                            userinfo.innerHTML += '<tr>' + '<td>' + res.data[i].id + '</td>' + '<td>' + res.data[i].fname + '</td>' + '<td>' + res.data[i].lname + '</td>' + '<td>' + res.data[i].age + '</td>' + '<td>' + res.data[i].email + '</td>' + '</tr>';
+                        }
+                    }
+                    else {
+                        alert('error');
+                    }
+                }
+                http.send();//4 close 
+            }
+        //post method
+
+            function CreateUser(){
+                document.getElementById('fromgroup').style.display = 'none';
+                var posturl = 'http://api.qshore.com/add-user';
+                var https = new XMLHttpRequest();
+                // get values from form
+                var fname = document.getElementById('Fname').value;
+                var lname = document.getElementById('Lname').value;
+                var age = document.getElementById('Age').value;
+                var email = document.getElementById('Email').value;
+                var password = document.getElementById('Password').value;
+                //create object
+                var userobj = {
+                    'fname' : fname,
+                    'lname':lname,
+                    'age':age,
+                    'email':email,
+                    'password':password
+                }
+                https.open('POST', posturl,true);
+                https.onload = function(){
+                    var res = JSON.parse(http.responseText);
+                    console.log(res);
+                    GetUsersList();
+                }
+                https.send(JSON.stringify(userobj));
+            }
+    
+    
+    </script>
+</body>
+</html>
